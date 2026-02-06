@@ -1,0 +1,6 @@
+@"
+node_modules/
+server/data/hrms.db
+.DS_Store
+npm-debug.log*
+" | Set-Content -NoNewline -Encoding UTF8 -Path .gitignore
