@@ -41,8 +41,9 @@ The app focuses on usability and a professional UI while keeping the stack minim
 - Designed for small-to-medium internal use; no horizontal scaling concerns.
 
 ## Submission Links (Fill In)
-- Live Application URL: 
-- GitHub Repository Link: 
+- Live Application URL: https://hrms-lite-app.vercel.app/
+- Hosted Backend API: https://hrmsliteapp-production.up.railway.app
+- GitHub Repository Link: https://github.com/spandan012/HRMS_liteApp
 
 ## Contact
 - Spandan Jain
