@@ -1,12 +1,18 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
 const sqlite3 = require('sqlite3').verbose();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const dbPath = path.join(__dirname, 'data', 'hrms.db');
+const defaultDbPath = path.join(__dirname, 'data', 'hrms.db');
+const dbPath = process.env.DB_PATH || defaultDbPath;
+const dbDir = path.dirname(dbPath);
+if (!fs.existsSync(dbDir)) {
+  fs.mkdirSync(dbDir, { recursive: true });
+}
 const db = new sqlite3.Database(dbPath);
 
 const run = (sql, params = []) =>
